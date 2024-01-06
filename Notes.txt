@@ -1,0 +1,13 @@
+use few commands {
+npx create-react-app ./
+npm i react-router-dom
+}
+
+I have add google font in navbar
+
+I have maked two directory inside the src directory
+1)components:-
+              In this directory have  three components file which display the data
+
+2)form:-
+        and in form directory also have three file login, signup, and Salentry(sales entry);

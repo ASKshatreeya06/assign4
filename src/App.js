@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Nav from "./components/Nav";
+import Login from "./form/Login";
+import Sinup from "./form/Sinup";
+import Salentry from "./form/Salentry";
+import Tsales from "./components/Tsales";
+import Tdrevenue from "./components/Tdrevenue";
+import { useState } from "react";
+
+
 
 function App() {
+  const [products, setProducts] = useState([]);
+  console.log(products)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <BrowserRouter>
+      <Nav />
+      <Routes>
+
+        <Route path="/" element={<Salentry pdata={setProducts}/>} />
+        <Route path="/tsales" element={<Tsales products={products} />} />
+        <Route path="/tdrevenue" element={<Tdrevenue products={products}/>} />
+
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Sinup />} />
+
+      </Routes>
+    </BrowserRouter>
+
   );
 }
 
