@@ -4,7 +4,8 @@ npm i react-router-dom
 }
 
 I have add google font in navbar
-
+Notes=> if You wanna view top 5 sales add first data 
+ else visite given line and watch video   https://drive.google.com/file/d/1jVtlgvJpNNI9X6BXtDOn4lRgLFkzKxDW/view?usp=sharing
 I have maked two directory inside the src directory
 1)components:-
               In this directory have  three components file which display the data
